@@ -1,0 +1,25 @@
+Simplified Explanation:
+Load Balancer (HAProxy):
+
+The load balancer is like a traffic cop directing cars. It evenly distributes incoming traffic between the web server and application server, making sure no one gets overwhelmed.
+Web Server:
+
+The web server is like a waiter serving food. It handles requests for web pages, images, and other static content that users see in their browsers.
+Application Server:
+
+The application server is like a chef in the kitchen. It processes dynamic requests, runs the website's code, and interacts with the database to generate personalized responses.
+Database Server:
+
+The database server is like a storage room holding ingredients. It stores and manages data for the website, such as user accounts, product information, and other important data.
+Specifics Explanation:
+Why Load Balancer?:
+
+We add a load balancer to evenly distribute incoming traffic between the web server and application server. This helps improve performance, scalability, and reliability by preventing overload on any single server.
+Why Split Components?:
+
+Splitting components into separate servers helps with organization, scalability, and fault isolation. It allows us to scale each component independently and troubleshoot issues without affecting other parts of the infrastructure.
+In Summary:
+The load balancer distributes traffic between the web server and application server.
+The web server serves static content like web pages and images.
+The application server processes dynamic requests and interacts with the database.
+Splitting components into separate servers improves scalability and fault tolerance.

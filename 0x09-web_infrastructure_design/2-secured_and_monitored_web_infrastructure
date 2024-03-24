@@ -1,0 +1,33 @@
+Specifics:
+Firewalls (Securing):
+
+Each firewall provides a layer of security by controlling and filtering incoming and outgoing network traffic. They help protect the servers from unauthorized access, malware, and other threats.
+SSL Certificate for HTTPS:
+
+The SSL certificate enables HTTPS, encrypting traffic between the users' browsers and the web servers. This ensures that sensitive data, such as passwords and credit card information, is securely transmitted over the internet.
+Monitoring Clients (Sumo Logic):
+
+The monitoring clients (Sumo Logic) collect and analyze data from the servers, helping to identify and troubleshoot issues, monitor performance, and ensure the reliability and security of the web infrastructure.
+Specific Explanation:
+Why Firewalls?:
+
+Firewalls are added to enhance security by controlling and filtering network traffic. They act as barriers between the servers and the internet, allowing only authorized traffic to pass through and blocking potentially harmful or malicious traffic.
+Why HTTPS?:
+
+HTTPS encrypts traffic between the users' browsers and the servers, ensuring that sensitive information remains confidential and secure during transmission. This is crucial for protecting user privacy and preventing data breaches.
+What Monitoring Is Used For?:
+
+Monitoring is used to track the health, performance, and security of the web infrastructure. It helps detect and diagnose issues, optimize performance, and ensure compliance with service level agreements (SLAs).
+How Monitoring Tools Collect Data?:
+
+Monitoring tools collect data by installing agents or clients on the servers, which gather information about system metrics, logs, and events. This data is then aggregated, analyzed, and visualized to provide insights into the health and performance of the infrastructure.
+Issues with this Infrastructure:
+Terminating SSL at Load Balancer Level:
+
+Terminating SSL at the load balancer can expose decrypted traffic within the internal network, potentially compromising data security. It's generally recommended to offload SSL termination at the web server level to maintain end-to-end encryption.
+Single MySQL Server Accepting Writes:
+
+Having only one MySQL server capable of accepting writes poses a single point of failure. If this server fails, it could lead to data loss or service interruption. Implementing replication or clustering for MySQL would improve fault tolerance and reliability.
+Uniformity of Server Components:
+
+Having servers with identical components (database, web server, application server) may result in a lack of diversity and increased vulnerability to common vulnerabilities or attacks. Introducing diversity in server components can enhance resilience and mitigate risks associated with software vulnerabilities.

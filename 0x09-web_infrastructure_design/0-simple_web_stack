@@ -1,0 +1,23 @@
+Infrastructure Design:
+•	User: A person who wants to access the website www.foobar.com.
+•	Server: A single server hosting the entire web infrastructure.
+•	Domain Name: foobar.com configured with a www record pointing to the server's IP address (e.g., 8.8.8.8).
+•	DNS Record: The www record in www.foobar.com is a CNAME record pointing to the server's IP address.
+•	Web Server: Nginx, responsible for handling HTTP requests and serving static content.
+•	Application Server: Responsible for running the dynamic parts of the website, processing requests, and generating responses.
+•	Application Files: The code base of the website hosted on the server.
+•	Database: MySQL, storing data required by the web application.
+Explanation of Specifics:
+1.	What is a server?: A server is a computer system that serves requests from other computers, such as serving web pages, processing data, or running applications.
+2.	Role of the domain name: The domain name (foobar.com) is like the address of the website on the internet, allowing users to access it using a memorable name instead of an IP address.
+3.	Type of DNS record www in www.foobar.com: The www record in www.foobar.com is a CNAME (Canonical Name) record, which points to another domain name (in this case, foobar.com).
+4.	Role of the web server: The web server (Nginx) handles incoming HTTP requests from users' browsers and serves static content like HTML, CSS, and images.
+5.	Role of the application server: The application server runs the dynamic parts of the website, executing code, processing user inputs, and generating personalized responses.
+6.	Role of the database: The database (MySQL) stores and manages the website's data, such as user accounts, posts, or product information.
+7.	Communication between server and user's computer: The server communicates with the user's computer using HTTP (Hypertext Transfer Protocol) over the internet.
+Issues with the Infrastructure:
+1.	Single Point of Failure (SPOF): Since the entire infrastructure is hosted on a single server, any failure in the server hardware or software could lead to downtime for the entire website.
+2.	Downtime during maintenance: When maintenance tasks like deploying new code require restarting the web server (Nginx), the website may experience downtime, causing inconvenience to users.
+3.	Limited scalability: If the website experiences a sudden surge in incoming traffic, a single server may struggle to handle the load efficiently, leading to slow performance or even crashes.
+By addressing these issues and considering scalability and redundancy, we could improve the reliability and performance of the web infrastructure. This might involve implementing load balancing, redundancy measures, and a more distributed architecture.
+

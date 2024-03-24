@@ -1,0 +1,16 @@
+Specifics:
+Why add Load Balancers (HAProxy)?: Load balancers distribute incoming traffic across multiple servers to improve reliability, scalability, and performance. In this setup, we have two load balancers for redundancy.
+Distribution algorithm for load balancer: The load balancer is configured with a round-robin distribution algorithm, which routes each new request to the next available server in a circular manner.
+Active-Active setup: Both load balancers are active and distribute traffic evenly across all servers simultaneously, ensuring high availability and performance.
+Database Primary-Replica (Master-Slave) cluster: The MySQL databases are configured in a Primary-Replica setup, where the Primary node handles write operations and replicates data to the Replica nodes. This setup ensures data redundancy and fault tolerance.
+Difference between Primary and Replica nodes: The Primary node accepts write operations and acts as the authoritative source of data. The Replica nodes replicate data from the Primary node and handle read operations, improving read scalability and fault tolerance.
+Issues with this Infrastructure:
+Single Points of Failure (SPOF): Despite having redundancy in load balancers and multiple servers, the absence of redundancy in other components like network infrastructure could be a potential single point of failure.
+Security Issues: Lack of a firewall and HTTPS encryption could expose the infrastructure to security threats, such as unauthorized access, data breaches, and interception of sensitive information.
+No Monitoring: Without monitoring systems in place, it would be challenging to detect and address performance issues, security breaches, or system failures in real-time. Monitoring is essential for maintaining the health and security of the infrastructure.
+
+
+
+
+
+
